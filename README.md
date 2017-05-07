@@ -56,7 +56,7 @@ Explore the other tabs of this user interface to find the Lightsail firewall and
    1. nano /etc/ssh/sshd_config add port 2200 below port 22
 while in the file also change PermitRootLogin prohibit-password to PermitRootLogin no to disallow root login. Change PasswordAuthentication from no to yes. We will change back after finishing SHH login setup
    2. save file(nano: ctrl+x, Y, Enter)
-   3. restart ssh servicesudo service ssh reload
+   3. restart ssh service sudo service ssh reload
  - Create SSH keys and copy to server manually
    1. On your local machine generate SSH key pair with: ssh-keygen
    2. save youkeygen file in your ssh directory /Users/your home directory/.ssh/id_rsa
