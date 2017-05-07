@@ -58,7 +58,7 @@ while in the file also change PermitRootLogin prohibit-password to PermitRootLog
    3. restart ssh servicesudo service ssh reload
  - Create SSH keys and copy to server manually
    1. On your local machine generate SSH key pair with: ssh-keygen
-   2. save youkeygen file in your ssh directory /Users/alexandernageswaran/.ssh/id_rsa
+   2. save youkeygen file in your ssh directory /Users/your home directory/.ssh/id_rsa
 You can add a password to use encase your keygen file gets compromised(you will be prompted to enter this password when you connect with key pair)
    3. Change the SSH port number configuration in Amazon lightsail in networking tab to 2200.
    4. login into grader account using password set during user creation ssh -v grader@*Public-IP-Address* -p 22
