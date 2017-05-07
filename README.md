@@ -73,14 +73,14 @@ You can add a password to use encase your keygen file gets compromised(you will 
    12. save file(nano: ctrl+x, Y, Enter)
    13. login with key pair: ssh grader@34.205.26.212 -p 22 -i ~/.ssh/id_rsa
  - Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
-   1. Check UFW status to make sure its inactivesudo ufw status
-   2. Deny all incoming by defaultsudo ufw default deny incoming
-   3. Allow outgoing by defaultsudo ufw default allow outgoing
+   1. Check UFW status to make sure its inactive sudo ufw status
+   2. Deny all incoming by default sudo ufw default deny incoming
+   3. Allow outgoing by default sudo ufw default allow outgoing
    4. Allow SSH sudo ufw allow ssh
-   5. Allow SSH on port 2200sudo ufw allow 2200/tcp
-   6. Allow HTTP on port 80sudo ufw allow 80/tcp
-   7. Allow NTP on port 123sudo ufw allow 123/udp
-   8. Turn on firewallsudo ufw enable
+   5. Allow SSH on port 2200 sudo ufw allow 2200/tcp
+   6. Allow HTTP on port 80 sudo ufw allow 80/tcp
+   7. Allow NTP on port 123 sudo ufw allow 123/udp
+   8. Turn on firewall sudo ufw enable
  
  - Configure the local timezone to UTC
     1. run sudo dpkg-reconfigure tzdata from prompt: select none of the above. Then select UTC.
