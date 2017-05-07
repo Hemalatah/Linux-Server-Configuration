@@ -6,6 +6,7 @@ Networking:
   - Public IP: 34.205.26.212
   - SSH Port: 22
   - Project URL: http://ec2-34-205-26-212.compute-1.amazonaws.com/
+  - SSh key Location in grader:  nano .ssh/authorized_keys
 
 # Steps to complete this project:
  
