@@ -4,7 +4,7 @@ I host my previous project [Item-Catalog](https://github.com/Hemalatah/Item-Cata
 
 Networking:
   - Public IP: 34.205.26.212
-  - SSH Port: 22
+  - SSH Port: 2200
   - Project URL: http://ec2-34-205-26-212.compute-1.amazonaws.com/
   - SSH key Location in grader:  nano .ssh/authorized_keys
 
@@ -34,7 +34,7 @@ _Once your instance is running, the display gets brighter._
 The big orange "Connect using SSH" button is the next step.
 Explore the other tabs of this user interface to find the Lightsail firewall and other settings. You'll need to configure the Lightsail firewall as one step of the project.When you SSH in, you'll be logged as the ubuntu user. 
  - Download the default key-pair from the amazon lightsail and copy to /.ssh folder.
- - Now Use the command ssh -i ~/.ssh/key.pem ubuntu@34.205.26.212 -p 22 to create the instance on your terminal
+ - Now Use the command ssh -i ~/.ssh/key.pem ubuntu@34.205.26.212 -p 2200 to create the instance on your terminal
  - Create a new user named grader
     1. sudo adduser grader
     2. optional: install finger to check user has been added apt-get install finger
@@ -62,7 +62,7 @@ while in the file also change PermitRootLogin prohibit-password to PermitRootLog
    2. save youkeygen file in your ssh directory /Users/your home directory/.ssh/id_rsa
 You can add a password to use encase your keygen file gets compromised(you will be prompted to enter this password when you connect with key pair)
    3. Change the SSH port number configuration in Amazon lightsail in networking tab to 2200.
-   4. login into grader account using password set during user creation ssh -v grader@*Public-IP-Address* -p 22
+   4. login into grader account using password set during user creation ssh -v grader@*Public-IP-Address* -p 2200
    5. Make .ssh directory mkdir .ssh
    6. make file to store key touch .ssh/authorized_keys
    7. On your local machine read contents of the public key cat .ssh/id_rsa.pub
@@ -71,7 +71,7 @@ You can add a password to use encase your keygen file gets compromised(you will 
    10. Set permissions for files: chmod 700 .ssh chmod 644 .ssh/authorized_keys
    11. Change PasswordAuthentication from yes back to no. nano /etc/ssh/sshd_config
    12. save file(nano: ctrl+x, Y, Enter)
-   13. login with key pair: ssh grader@34.205.26.212 -p 22 -i ~/.ssh/id_rsa
+   13. login with key pair: ssh grader@34.205.26.212 -p 2200 -i ~/.ssh/id_rsa
  - Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
    1. Check UFW status to make sure its inactive sudo ufw status
    2. Deny all incoming by default sudo ufw default deny incoming
